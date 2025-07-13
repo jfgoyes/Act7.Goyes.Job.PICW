@@ -1,7 +1,7 @@
 class ParImparLista extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({ mode:'open' });
+        this.attachShadow({ mode: 'open' });
     }
 
     connectedCallback() {
@@ -13,7 +13,7 @@ class ParImparLista extends HTMLElement {
             <ul id="lista_numeros"></ul>
         `;
 
-        window.addEventListener('rango-numeros', (e) => {
+        window.addEventListener('rango_numeros', (e) => {
             const { valor_inicial, valor_final } = e.detail;
             this.mostrarListaNumeros(valor_inicial, valor_final);
         });
@@ -25,7 +25,7 @@ class ParImparLista extends HTMLElement {
 
         for (let valor_numerico = valor_inicial; valor_numerico <= valor_final; valor_numerico++) {
             const li = document.createElement('li');
-            li.textContent = `${valor_numerico} - ${valor_numerico % 2 === 0 ? 'Número par' : 'Numero impar'}`;
+            li.textContent = `${valor_numerico} - ${valor_numerico % 2 === 0 ? 'Número par' : 'Número impar'}`;
             ul.appendChild(li);
         }
     }
