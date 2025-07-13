@@ -15,7 +15,7 @@ class InputRange extends HTMLElement {
                 <input type="number" id="numero_inicial" />
                 <label>Número final: </label>
                 <input type="number" id="numero_final" />
-                <buuton id="enviar_numero">Mostrar resultado</button>
+                <button id="enviar_numero">Mostrar resultado</button>
             </div>
         `;
 

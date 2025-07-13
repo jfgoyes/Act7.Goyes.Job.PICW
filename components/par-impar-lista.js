@@ -14,16 +14,16 @@ class ParImparLista extends HTMLElement {
         `;
 
         window.addEventListener('rango-numeros', (e) => {
-            const { numero_inicial, numero_final } = e.detail;
-            this.mostrarListaNumeros(numero_inicial, numero_final);
+            const { valor_inicial, valor_final } = e.detail;
+            this.mostrarListaNumeros(valor_inicial, valor_final);
         });
     }
 
-    mostrarListaNumeros(numero_inicial, numero_final) {
+    mostrarListaNumeros(valor_inicial, valor_final) {
         const ul = this.shadowRoot.querySelector('#lista_numeros');
         ul.innerHTML = '';
 
-        for (let valor_numerico = numero_inicial; valor_numerico <= numero_final; valor_numerico++) {
+        for (let valor_numerico = valor_inicial; valor_numerico <= valor_final; valor_numerico++) {
             const li = document.createElement('li');
             li.textContent = `${valor_numerico} - ${valor_numerico % 2 === 0 ? 'Número par' : 'Numero impar'}`;
             ul.appendChild(li);
