@@ -6,17 +6,17 @@ class InputRange extends HTMLElement {
 
     connectedCallback() {
         this.shadowRoot.innerHTML = `
-        <style>
-            div { margin-bottom: 10px; }
-            input, button { padding: 5px; margin: 4px; }
-        <style>
-        <div>
-            <label>Número inicial: </label>
-            <input type="number" id="numero_inicial" />
-            <label>Número final: </label>
-            <input type="number" id="numero_final" />
-            <buuton id="enviar_numero">Mostrar resultado</button>
-        </div>
+            <style>
+                div { margin-bottom: 10px; }
+                input, button { padding: 5px; margin: 4px; }
+            </style>
+            <div>
+                <label>Número inicial: </label>
+                <input type="number" id="numero_inicial" />
+                <label>Número final: </label>
+                <input type="number" id="numero_final" />
+                <buuton id="enviar_numero">Mostrar resultado</button>
+            </div>
         `;
 
         this.shadowRoot.querySelector('#enviar_numero').addEventListener('click', () => {
