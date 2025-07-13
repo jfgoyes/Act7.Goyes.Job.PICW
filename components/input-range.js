@@ -33,7 +33,7 @@ class InputRange extends HTMLElement {
                 return;
             }
 
-            this.dispatchEvent(new CustomEvent('rango_numeros', {
+            this.dispatchEvent(new CustomEvent('rango-seleccionado', {
                 detail: { valor_inicial, valor_final },
                 bubbles: true,
                 composed: true

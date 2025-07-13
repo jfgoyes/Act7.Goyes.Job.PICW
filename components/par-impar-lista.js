@@ -13,7 +13,7 @@ class ParImparLista extends HTMLElement {
             <ul id="lista_numeros"></ul>
         `;
 
-        window.addEventListener('rango_numeros', (e) => {
+        window.addEventListener('rango-seleccionado', (e) => {
             const { valor_inicial, valor_final } = e.detail;
             this.mostrarListaNumeros(valor_inicial, valor_final);
         });
